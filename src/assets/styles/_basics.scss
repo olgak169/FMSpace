@@ -1,0 +1,88 @@
+@import 'variables';
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: $dark;
+}
+body {
+    background-color: $dark;
+    color: $white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow';
+}
+#app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+.image-content {
+    min-height: 10rem;
+}
+.home-page-bg {
+    background-image: url('~@/assets/img/home/background-home-mobile.jpg');
+    background-position: center center;
+}
+.destination-page-bg {
+    background-image: url('~@/assets/img/destination/background-destination-mobile.jpg');
+    background-position: center top;
+}
+.crew-page-bg {
+    background-image: url('~@/assets/img/crew/background-crew-mobile.jpg');
+    background-position: center top;
+}
+.technology-page-bg {
+    background-image: url('~@/assets/img/technology/background-technology-mobile.jpg');
+    background-position: center bottom;
+}
+
+@media (min-width: $breakpoint-md) {
+    .home-page-bg {
+        background-image: url('~@/assets/img/home/background-home-tablet.jpg');
+        background-position: center bottom;
+    }
+    .destination-page-bg {
+        background-image: url('~@/assets/img/destination/background-destination-tablet.jpg');
+        background-position: center bottom;
+    }
+    .crew-page-bg {
+        background-image: url('~@/assets/img/crew/background-crew-tablet.jpg');
+        background-position: center bottom;
+    }
+    .technology-page-bg {
+        background-image: url('~@/assets/img/technology/background-technology-tablet.jpg');
+        background-position: center bottom;
+    }
+}
+@media (min-width: $breakpoint-lg) {
+    .home-page-bg {
+        background-image: url('~@/assets/img/home/background-home-desktop.jpg');
+        background-position: center center;
+    }
+    .destination-page-bg {
+        background-image: url('~@/assets/img/destination/background-destination-desktop.jpg');
+        background-position: center center;
+    }
+    .crew-page-bg {
+        background-image: url('~@/assets/img/crew/background-crew-desktop.jpg');
+        background-position: center top;
+    }
+    .technology-page-bg {
+        background-image: url('~@/assets/img/technology/background-technology-desktop.jpg');
+        background-position: center center;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+img {
+    display: block;
+    max-width: 100%;
+}

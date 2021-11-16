@@ -86,3 +86,40 @@ img {
     display: block;
     max-width: 100%;
 }
+
+@mixin grid-sm {
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(0rem, 26rem) minmax(2em, 1fr);
+    grid-template-rows: min-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5em 0 2em 0;
+}
+@mixin grid-md {
+    grid-template-columns: minmax(2em, 1fr) minmax(25rem, 30rem) minmax(2em, 1fr);
+    margin: 2.5em 0 2em 0;
+    .page-title {
+        transform: translate(-14rem, -2rem);
+    }
+    .image-content {
+        max-width: 60%;
+    }
+}
+@mixin grid-lg{
+    margin: 2rem 0 0 0;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+
+    .page-title {
+        transform: translate(0, 0);
+        align-self: baseline;
+    }
+    .image-content {
+        max-width: 100%;
+    }
+}
+@mixin grid-lg-wide {
+    grid-template-columns: minmax(2em, 1fr) minmax(20rem, 28rem)  minmax(2em, 10em) minmax(20rem, 28rem) minmax(2em, 1fr);
+}

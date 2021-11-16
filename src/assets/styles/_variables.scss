@@ -1,6 +1,7 @@
 $white: hsl(0, 0%, 100%);
 $dark: hsl(230, 35%, 7%);
 $light: hsl(231, 77%, 90%);
+$dark-50: hsl(230 35% 7% / 0.5);
 $dark-85: hsl(230 35% 7% / 0.85);
 $white-50: hsl(0 0% 100% / 0.5);
 $white-17: hsl(0 0% 100% / 0.17);
@@ -8,3 +9,10 @@ $white-17: hsl(0 0% 100% / 0.17);
 $breakpoint-sm: 35rem;
 $breakpoint-md: 45rem;
 $breakpoint-lg: 65rem;
+
+$outline: 1px dashed $light;
+$grid-columns-sm: minmax(2em, 1fr) minmax(0rem, 26rem) minmax(2em, 1fr);
+$grid-columns-md: minmax(2em, 1fr) minmax(25rem, 30rem) minmax(2em, 1fr);
+$grid-columns-lg-narrow: minmax(2em, 1fr) minmax(0, 32rem)  minmax(2em, 6em) minmax(20rem, 28rem) minmax(2em, 1fr);
+$grid-columns-lg-wide: minmax(2em, 1fr) minmax(20rem, 28rem)  minmax(2em, 10em) minmax(20rem, 28rem) minmax(2em, 1fr);
+

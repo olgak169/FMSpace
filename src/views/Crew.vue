@@ -21,11 +21,11 @@
         :aria-label="dot.name" />
     </div>
     <Article-component>
-      <template v-slot:titles>
+      <template #titles>
         <h2 class="heading-4">{{ pageData[current].role}}</h2>
         <h3 class="heading-3" >{{ pageData[current].name }}</h3>
       </template>
-      <template v-slot:text>
+      <template #text>
         <p class="text-p">{{pageData[current].bio}}</p>
       </template>
     </Article-component>

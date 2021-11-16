@@ -1,0 +1,80 @@
+@import 'basics';
+@import 'variables';
+.container__home {
+    @include grid-sm;
+    grid-template-areas:
+                        '. content .'
+                        '. home-btn .';
+    row-gap: 2rem;
+    .home-content {
+      grid-area: content;
+    }
+    .home-cta {
+      grid-area: home-btn;
+    }
+    h1 {
+      color: $light;
+    }
+    h2 {
+      margin: 1.5rem 0;
+    }
+  }
+  .home-content {
+    margin: 1.5rem 0;
+  }
+  .home-cta {
+    a {
+      background: $white;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      width: clamp(9.375rem, 1rem + 28vw, 17.125rem);
+      height: clamp(9.375rem, 1rem + 28vw, 17.125rem);
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.6);
+        width: 150%;
+        height: 150%;
+        border-radius: 50%;
+        background: $white-17;
+        z-index: 1;
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      
+    }
+  }
+  @media (min-width: $breakpoint-md) {
+    .container__home {
+      @include grid-md;
+    }
+    .home-cta {
+      align-self: center;
+      justify-self: center;
+      a:hover::before {
+          transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  @media (min-width: $breakpoint-lg) {
+    .container__home {
+      @include grid-lg;
+      grid-template-columns: $grid-columns-lg-wide;
+      align-self: center;
+      grid-template-areas: '. content . home-btn .';
+      column-gap: 2rem;
+    }
+    .home-content {
+      margin: 2rem 0 0 0;
+      h2 {
+        margin: 2rem 0;
+      }
+    }
+    .home-cta {
+      align-self: end;
+      justify-self: end;
+    }
+  }
